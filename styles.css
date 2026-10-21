@@ -341,3 +341,134 @@ main .link-line {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Print / Save as PDF: show every section, swap the buttons for a contact line */
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: Letter;
+    margin: 0.5in 0.55in;
+  }
+
+  body {
+    display: block;
+    margin: 0;
+    font-size: 10.5pt;
+  }
+
+  header {
+    position: static;
+    width: auto;
+    padding: 0 0 14px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 18px;
+  }
+
+  .headerbox {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    column-gap: 18px;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+  }
+
+  .headerbox img {
+    grid-row: 1 / span 3;
+    width: 84px;
+    height: 84px;
+    margin: 0;
+  }
+
+  #name {
+    margin: 0;
+    font-size: 1.7rem;
+  }
+
+  .headerbox p {
+    margin: 0;
+  }
+
+  .headerbox .print-only {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.85rem;
+  }
+
+  .headerbox .print-only a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  main {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* all three views, each starting on a fresh page */
+  .view[hidden] {
+    display: block !important;
+  }
+
+  .view + .view {
+    break-before: page;
+  }
+
+  main h2 {
+    margin-top: 26px;
+    break-after: avoid;
+  }
+
+  .entry-head,
+  figure,
+  blockquote,
+  .entry li {
+    break-inside: avoid;
+  }
+
+  .entry-head {
+    break-after: avoid;
+  }
+
+  .gallery {
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .gallery img,
+  .gallery video {
+    max-height: 2.4in;
+    cursor: default;
+  }
+
+  .gallery figure.wide img,
+  .gallery figure.wide video {
+    max-height: 2.6in;
+  }
+
+  .gallery figcaption {
+    font-size: 0.75rem;
+  }
+
+  /* print the video's still frame without the play bar */
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+
+  .entry {
+    margin-bottom: 24px;
+  }
+
+  /* keep a project's intro paragraph in one piece (its heading stays with it) */
+  .entry > p {
+    break-inside: avoid;
+  }
+}
