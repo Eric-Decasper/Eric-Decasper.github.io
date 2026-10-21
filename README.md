@@ -43,5 +43,12 @@ Check with Western Magnetics and Voliro before posting photos of their hardware 
 - [ ] Photos for at least the test stand, the Voliro payloads and the scanning arm.
 
 ## Publishing (GitHub Pages)
-Create a public repo named `<your-github-username>.github.io`, push this folder to `main`, and the site goes live at
-`https://<your-github-username>.github.io` within a minute or two. Every later push to `main` updates it.
+Live at **https://eric-decasper.github.io** from repo `Eric-Decasper/Eric-Decasper.github.io` (published 2026-10-21).
+Any push to `main` updates the site within a minute or two:
+```
+git add -A
+git commit -m "Describe the change"
+git push
+```
+Custom domain (planned): buy ericdecasper.com, add a `CNAME` file containing it, set it under
+Settings > Pages, and point the domain's DNS at GitHub Pages.
