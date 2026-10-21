@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <header>
@@ -172,6 +172,31 @@
         </div>
       </article>
 
+      <article class="entry" id="scanning-arm">
+        <div class="entry-head">
+          <h3>Aerial scanning arm <span class="sub">Senior project, sponsored by Voliro AG</span></h3>
+          <span class="date">Jan 2026 – now</span>
+        </div>
+        <p>A drone-mounted robotic arm that sweeps an electromagnetic sensor across steel structures to find defects
+        at height. I'm leading the team, and we've done all of the design, controls software and electronics
+        ourselves. The payload is still in development, and we're now flight testing it on a Voliro T at Cal Poly.</p>
+        <ul>
+          <li>Two-link arm under a 1 kg limit, built from machined aluminum parts, SLS-printed PA11 nylon parts printed
+          on campus, and carbon fiber plates water-jet cut on campus.</li>
+          <li>A Teensy 4.1 runs inverse kinematics to drive two DYNAMIXEL servos, with a dashboard we built for tuning
+          the control parameters.</li>
+          <li>Custom Teensy carrier PCB with our own DYNAMIXEL motor driver, split into a main board and a servo hub so
+          it fits on the airframe and survives vibration.</li>
+          <li>Bench-tested on real steel assets before moving to flight tests.</li>
+        </ul>
+        <div class="gallery two">
+          <figure class="wide"><video src="assets/video/arm-flight-close.mp4" poster="assets/video/arm-flight-close.jpg" controls muted loop playsinline preload="none" aria-label="Voliro T in flight with the scanning arm moving below it"></video><figcaption>Flight test with the arm moving, October 2026</figcaption></figure>
+          <figure class="tall"><video src="assets/video/arm-bench-sweep.mp4" poster="assets/video/arm-bench-sweep.jpg" controls muted loop playsinline preload="none" aria-label="The arm on a bench sweeping its sensor along a wall under remote control"></video><figcaption>Bench test: sweeping the sensor along a wall under RC control</figcaption></figure>
+          <figure class="tall"><img style="object-position: 50% 75%" src="assets/img/arm-flight-line.jpg" alt="Voliro T and a laptop on an airfield pad with hills behind, set up for a flight test" loading="lazy"><figcaption>Set up on the flight line before a test</figcaption></figure>
+          <figure class="wide"><video src="assets/video/arm-flight-hover.mp4" poster="assets/video/arm-flight-hover.jpg" controls muted loop playsinline preload="none" aria-label="Voliro T hovering with the scanning arm payload"></video><figcaption>Hover test with the payload</figcaption></figure>
+        </div>
+      </article>
+
       <article class="entry" id="iot-placement">
         <div class="entry-head">
           <h3>IoT sensor placement payload <span class="sub">Voliro AG internship</span></h3>
@@ -195,23 +220,6 @@
           <figure class="wide"><img src="assets/img/iot-sensor-overhead-pipes.jpg" alt="Orange wireless sensor on an insulated pipe in an overhead pipe rack, seen from below" loading="lazy"><figcaption>A sensor on an overhead line, out of reach without a lift or scaffolding</figcaption></figure>
           <figure class="wide"><img src="assets/img/iot-payload-flight.jpg" alt="Voliro T hovering indoors with the white cylindrical sensor deployment payload mounted underneath" loading="lazy"><figcaption>The payload in flight testing at Voliro</figcaption></figure>
         </div>
-      </article>
-
-      <article class="entry">
-        <div class="entry-head">
-          <h3>Aerial scanning arm <span class="sub">Senior project, sponsored by Voliro AG</span></h3>
-          <span class="date">Jan 2026 – now</span>
-        </div>
-        <ul>
-          <li>Leading a team building a drone-mounted robotic arm that sweeps an electromagnetic sensor across steel
-          structures to find defects at height.</li>
-          <li>Designed the two-link carbon fiber arm to stay under a 1 kg limit, and its control system: a Teensy 4.1
-          running inverse kinematics to drive two DYNAMIXEL servos.</li>
-          <li>Designed a custom carrier PCB for the Teensy, split into a main board and a servo hub so it fits on the
-          airframe and survives vibration. Boards are in fabrication now.</li>
-          <li>Bench-tested the payload on real steel assets; now integrating it on a Voliro drone shipped to Cal Poly
-          for our own flight testing.</li>
-        </ul>
       </article>
 
       <article class="entry" id="pants-pulleez">
@@ -254,6 +262,6 @@
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

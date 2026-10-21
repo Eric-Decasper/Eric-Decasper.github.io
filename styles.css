@@ -227,6 +227,23 @@ main a {
   line-height: 1.35;
 }
 
+/* Videos sit in the same grid as photos */
+.gallery video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  background: #111;
+  border: 1px solid var(--rule);
+}
+
+.gallery figure.wide video {
+  aspect-ratio: 16 / 9;
+}
+
+.gallery figure.tall video {
+  aspect-ratio: 4 / 5;
+}
+
 /* CAD renders and PCB screenshots: show the whole thing instead of cropping */
 .gallery.cad img {
   object-fit: contain;
