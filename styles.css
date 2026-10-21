@@ -195,6 +195,13 @@ main .role {
   color: var(--ink);
 }
 
+/* one-line result under an entry, e.g. a return offer */
+main .outcome {
+  margin: 4px 0 0;
+  font-weight: 500;
+  color: var(--ink);
+}
+
 main a {
   color: var(--accent);
 }
