@@ -1,0 +1,319 @@
+:root {
+  --accent: #1f4e79;      /* steel blue: headings rule, selected button, links */
+  --ink: #1d1d1b;
+  --text: #33332f;
+  --muted: #6b6a64;
+  --rule: #dcdad3;
+  --sans: 'IBM Plex Sans', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+  background: #fff;
+  font-family: var(--sans);
+  color: var(--text);
+}
+
+/* Left column: name, photo, buttons */
+header {
+  width: 270px;
+  flex-shrink: 0;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 20px;
+}
+
+.headerbox {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+#name {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.headerbox img,
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 1px solid var(--rule);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f0ec;
+  color: var(--muted);
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.headerbox p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.header-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.header-links button {
+  font-family: var(--sans);
+  color: var(--text);
+  padding: 9px 15px;
+  border: 1px solid #c9c7bf;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.header-links button:hover {
+  background: #f1f0ec;
+}
+
+.header-links button.current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Right column */
+main {
+  flex: 1;
+  padding: 40px;
+  max-width: 720px;
+}
+
+main h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 44px 0 18px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.view > h2:first-child {
+  margin-top: 0;
+}
+
+main p {
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+/* Experience / project entries: name on the left, dates on the right */
+.entry {
+  margin-bottom: 36px;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.entry-head h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.entry-head .sub {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.date {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+main .role {
+  font-style: italic;
+  color: var(--muted);
+  margin: 2px 0 10px;
+}
+
+.entry ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.entry li {
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.entry li::marker {
+  color: var(--accent);
+}
+
+.skills dl {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px 16px;
+  line-height: 1.5;
+}
+
+.skills dt {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+main a {
+  color: var(--accent);
+}
+
+/* Photo galleries */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border: 1px solid var(--rule);
+  cursor: zoom-in;
+}
+
+.gallery figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 5px;
+  line-height: 1.35;
+}
+
+/* CAD renders and PCB screenshots: show the whole thing instead of cropping */
+.gallery.cad img {
+  object-fit: contain;
+  background: #fff;
+}
+
+.gallery figure:only-child {
+  grid-column: span 2;
+}
+
+/* lead photo across the full width, the rest in the grid below */
+.gallery figure.wide {
+  grid-column: 1 / -1;
+}
+
+.gallery figure.wide img {
+  aspect-ratio: 3 / 2;
+}
+
+.entry-head + p {
+  margin-top: 12px;
+}
+
+.gallery.two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* a short quote from someone else about the work */
+.credit {
+  margin: 20px 0 6px;
+  padding: 2px 0 2px 16px;
+  border-left: 2px solid var(--accent);
+}
+
+main .credit p {
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.credit footer {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* portrait photos: keep them tall instead of cropping to landscape */
+.gallery figure.tall img {
+  aspect-ratio: 4 / 5;
+}
+
+main .link-line {
+  margin-top: 12px;
+}
+
+/* Phones: stack the columns */
+@media (max-width: 680px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  header {
+    position: static;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  main {
+    padding: 20px 16px;
+    width: 100%;
+  }
+
+  .entry-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .skills dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .skills dd {
+    margin-bottom: 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

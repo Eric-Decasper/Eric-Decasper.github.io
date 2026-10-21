@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Decasper</title>
+  <meta name="description" content="Eric Decasper, Mechanical Engineering student at Cal Poly San Luis Obispo. Test stands, drone payloads and the hardware that runs them.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="headerbox">
+      <h1 id="name">Eric Decasper</h1>
+      <img src="assets/img/profile.jpg" alt="Eric Decasper">
+      <p>Mechanical Engineering<br>Cal Poly San Luis Obispo</p>
+    </div>
+    <nav class="header-links">
+      <button type="button" data-view="about" class="current">About</button>
+      <button type="button" data-view="experience">Experience</button>
+      <button type="button" data-view="projects">Projects</button>
+      <button type="button" data-link="assets/Eric_Decasper_Resume.pdf">Resume</button>
+      <button type="button" data-link="https://www.linkedin.com/in/eric-decasper-673626203">LinkedIn</button>
+      <button type="button" data-link="mailto:eric@decasper.net">Email</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About -->
+    <div class="view" id="about">
+      <h2>About</h2>
+      <p>I'm a mechanical engineering student at Cal Poly, San Luis Obispo, graduating in December 2026. Most of my
+      work is mechanical design for hardware that has to run in the real world, plus the electronics and code that
+      drive it: production test stands, drone payloads, and the fixtures used to measure them.</p>
+      <p>This summer I interned at Western Magnetics, where I built the end-of-line test stand that now checks every
+      motor coming off their line. Before that I spent six months at Voliro in Zurich developing aerial inspection
+      and repair payloads. I'm now leading a Voliro-sponsored senior project at Cal Poly: a drone-mounted robotic arm
+      that scans steel structures for defects.</p>
+      <p>I'm looking for full-time mechanical, robotics and hardware roles starting in early 2027.</p>
+
+      <section>
+        <h2>Education</h2>
+        <div class="entry-head">
+          <h3>California Polytechnic State University, San Luis Obispo</h3>
+          <span class="date">2022 – Dec 2026</span>
+        </div>
+        <p class="role">B.S. Mechanical Engineering</p>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+        <dl>
+          <dt>CAD &amp; analysis</dt><dd>SolidWorks, Onshape, Fusion 360, ANSYS FEA, DFM, GD&amp;T</dd>
+          <dt>Fabrication</dt><dd>3D printing (FDM, SLA, SLS), wire-EDM tooling, CNC routing, composites</dd>
+          <dt>Electronics</dt><dd>KiCad PCB design, Teensy / Arduino, DYNAMIXEL servos</dd>
+          <dt>Programming</dt><dd>Python, MATLAB, Java, C++</dd>
+          <dt>Languages</dt><dd>English, Swiss German (conversational), French (conversational)</dd>
+        </dl>
+      </section>
+    </div>
+
+    <!-- Experience -->
+    <div class="view" id="experience" hidden>
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Western Magnetics Company</h3>
+          <span class="date">Jun – Aug 2026</span>
+        </div>
+        <p class="role">Mechanical Engineering Intern · South San Francisco, CA</p>
+        <ul>
+          <li>Designed and built the end-of-line test stand that grades every motor off the production line, screening
+          electrical imbalance, vibration and drag in a 45-second cycle. It ran over 4,400 cycles by August.</li>
+          <li>Set up an in-line magnet bond strength test that caught an under-cured batch before it shipped, and
+          qualified an adhesive 2–3x stronger, taking adhesion failures from over 70% to near zero.</li>
+          <li>Owned custom wire-EDM tooling from design through fabrication, and set up an outside machining partner
+          that turns around urgent tooling in about a week.</li>
+          <li>Traced motor KV variation to magnet thickness and the lamination tolerance stack-up, then built a
+          measurement fixture so the team could quantify and control it.</li>
+        </ul>
+        <!-- Photos: add a gallery like this once you have them (see README).
+        <div class="gallery">
+          <figure><img src="assets/img/wmc-test-stand.jpg" alt="End-of-line motor test stand" loading="lazy"><figcaption>End-of-line test stand</figcaption></figure>
+        </div>
+        -->
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Voliro AG</h3>
+          <span class="date">Jul – Dec 2025</span>
+        </div>
+        <p class="role">Mechanical Engineering Intern · Zurich, Switzerland</p>
+        <ul>
+          <li>Developed aerial spot-repair payloads with Monti Power from concept to flight-tested prototypes, proving
+          out an inspect-and-repair workflow on one platform that Voliro now sells as a service
+          (<a href="#projects">the Aeroblaster</a>).</li>
+          <li>Restructured legacy payload assemblies in SolidWorks into modular CAD so new payloads could be added and
+          updated without rebuilding the tree.</li>
+          <li>Designed a cooling solution for a next-generation drone radio and built a 40 °C environmental chamber to
+          verify it ran continuously at worst-case ambient temperature.</li>
+        </ul>
+        <blockquote class="credit">
+          <p>“He consistently delivered ready-to-use product prototypes while working on highly open-ended
+          engineering tasks.”</p>
+          <footer>Reference letter from Voliro AG, signed by Gian Jörimann, Senior Mechanical Engineer, and Simon Furer,
+          CFO. <a href="assets/Eric_Decasper_Voliro_Reference_Letter.pdf" target="_blank" rel="noopener">Read the full letter (PDF)</a></footer>
+        </blockquote>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>FRC Team 670, Homestead High School</h3>
+          <span class="date">Aug 2021 – Jun 2022</span>
+        </div>
+        <p class="role">Mechanical Lead · Cupertino, CA</p>
+        <ul>
+          <li>Led design and fabrication using mills, laser cutters, CNC routers and 3D printers.</li>
+          <li>Designed and added a vacuum and compressed-air system to the team's CNC router so it could cut aluminum.</li>
+          <li>Team won the FIRST Quality Award and the 2022 Cal Games championship.</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Projects -->
+    <div class="view" id="projects" hidden>
+      <h2>Projects</h2>
+
+      <article class="entry" id="aeroblaster">
+        <div class="entry-head">
+          <h3>Aeroblaster: find-it, fix-it repair for the Voliro T <span class="sub">Voliro AG internship, with Monti Power</span></h3>
+          <span class="date">Jul – Dec 2025</span>
+        </div>
+        <p>Corrosion on silos, tanks and other tall steel structures usually means scaffolding or rope access and a
+        shutdown, even for a small spot. The Voliro T drone could already find that corrosion through contact
+        inspection. This project made it able to fix it on the same flight.</p>
+        <ul>
+          <li>Led development of the blaster payload, built around Monti Power's Bristle Blaster head, from concept to
+          a 3D-printed PLA prototype in one week, then through nylon and CNC-machined metal versions to bring it as
+          close to production as possible.</li>
+          <li>Designed its core mechanical architecture, which the production Aeroblaster still uses after later
+          iterations. The payload weighs under 800 g.</li>
+          <li>Moved the frame from printed plastic to aluminum so it doubles as the heat sink: the drive motor mounts
+          directly to it, hidden behind the transmission cover.</li>
+          <li>Designed and prototyped a filtered cooling housing with a fan driven by the motor's own rotation. The fan
+          creates negative pressure that pulls air in through filters, keeping fine metal dust from blasting out of the
+          motor.</li>
+          <li>Designed the coating roller payload. The roller in use today is my version.</li>
+          <li>Together the two payloads complete the workflow on one platform: inspect, blast the spot to bare metal,
+          roll on a protective coating, and log it all with photos and timestamps.</li>
+          <li>The payload preps steel to a profile comparable to SSPC-SP 11 (25 µm or more), validated by an independent
+          lab and reviewed by SGK, the Swiss Society for Corrosion Protection.</li>
+          <li>On its first field job it repaired three 30 × 30 cm patches on a cement plant silo in under an hour,
+          with no production downtime.</li>
+        </ul>
+        <p class="link-line">Now sold by Monti Power and Voliro as the Aeroblaster:
+        <a href="https://montipower.com/pages/aeroblaster" target="_blank" rel="noopener">montipower.com/pages/aeroblaster</a></p>
+        <blockquote class="credit">
+          <p>“credit to Eric Decasper and the Voliro and MontiPower team for pushing the technical development and
+          showing what is achievable.”</p>
+          <footer>Timo Müller, CEO of Voliro, <a href="https://www.linkedin.com/posts/timo-mueller-ba8105162_a-major-step-toward-find-and-fix-workflows-ugcPost-7402344871904272384-EuUF/" target="_blank" rel="noopener">on LinkedIn</a></footer>
+        </blockquote>
+        <div class="gallery two">
+          <figure class="wide"><img style="object-position: 50% 72%" src="assets/img/aeroblaster-blasting-panel.jpg" alt="Voliro T with the Aeroblaster arm pressing a spinning bristle wheel against a rusted panel on a blue container, with industrial stacks behind" loading="lazy"><figcaption>The Aeroblaster stripping a rusted panel at an industrial site</figcaption></figure>
+          <figure class="tall"><img style="object-position: 50% 60%" src="assets/img/aeroblaster-pla-prototype.jpg" alt="First 3D-printed blaster prototype with a belt drive and bristle wheel mounted on the Voliro T" loading="lazy"><figcaption>The first 3D-printed prototype on the Voliro T, before the move to an aluminum frame</figcaption></figure>
+          <figure class="tall"><img src="assets/img/payload-lineup.jpg" alt="Three black blaster payloads, the coating roller and a brush tool laid out in a tray" loading="lazy"><figcaption>The payload set: three blaster units, the coating roller and a brush tool</figcaption></figure>
+          <figure class="tall"><img style="object-position: 50% 65%" src="assets/img/coating-roller-field-test.jpg" alt="Eric loading the coating roller with paint next to the Voliro T on its landing pad while Timo Müller films" loading="lazy"><figcaption>Field-testing the coating roller on a real asset with Voliro CEO Timo Müller</figcaption></figure>
+          <figure class="tall"><img style="object-position: 80% 50%" src="assets/img/coating-roller-on-pylon.jpg" alt="Voliro T drone pressing the coating roller against a green steel pylon" loading="lazy"><figcaption>The coating roller painting a steel pylon from the Voliro T</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="entry" id="iot-placement">
+        <div class="entry-head">
+          <h3>IoT sensor placement payload <span class="sub">Voliro AG internship</span></h3>
+          <span class="date">2025</span>
+        </div>
+        <p>Corrosion under insulation (CUI) is hard to catch because it hides beneath the cladding on pipes and
+        vessels. Senergetics makes the I-tiQ, a wireless ATEX-certified sensor that clamps to the outside of the
+        insulation without drilling and feeds data to an AI platform that flags where CUI is forming. This payload lets
+        the Voliro T place those sensors from the air.</p>
+        <ul>
+          <li>Did the mechanical design of the sensor deployment payload, with direction from Dennis den Elzen,
+          Voliro's product manager.</li>
+          <li>The payload is now in use in real industrial environments.</li>
+        </ul>
+        <p class="link-line">More on the sensor and its launch in
+        <a href="https://www.linkedin.com/posts/eric-decasper-673626203_proud-to-have-worked-on-the-mechanical-design-ugcPost-7420228619052109826-oyau/" target="_blank" rel="noopener">my LinkedIn post</a>.</p>
+        <div class="gallery two">
+          <figure class="wide"><img src="assets/img/iot-drone-on-site.jpg" alt="Voliro T with the sensor deployment payload sitting on a wet rooftop beneath industrial pipe racks, ready for takeoff" loading="lazy"><figcaption>Ready for takeoff at an industrial site, under the pipe racks it places sensors on</figcaption></figure>
+          <figure class="tall"><img src="assets/img/iot-sensor-pipe-rack.jpg" alt="Orange wireless sensor attached to the insulation cladding of a pipe in a pipe rack" loading="lazy"><figcaption>A sensor placed on insulated pipe in a pipe rack</figcaption></figure>
+          <figure class="tall"><img src="assets/img/iot-sensor-stack.jpg" alt="Orange wireless sensor attached high on a tall exhaust stack" loading="lazy"><figcaption>A sensor placed high on an exhaust stack</figcaption></figure>
+          <figure class="wide"><img src="assets/img/iot-sensor-overhead-pipes.jpg" alt="Orange wireless sensor on an insulated pipe in an overhead pipe rack, seen from below" loading="lazy"><figcaption>A sensor on an overhead line, out of reach without a lift or scaffolding</figcaption></figure>
+          <figure class="wide"><img src="assets/img/iot-payload-flight.jpg" alt="Voliro T hovering indoors with the white cylindrical sensor deployment payload mounted underneath" loading="lazy"><figcaption>The payload in flight testing at Voliro</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Aerial scanning arm <span class="sub">Senior project, sponsored by Voliro AG</span></h3>
+          <span class="date">Jan 2026 – now</span>
+        </div>
+        <ul>
+          <li>Leading a team building a drone-mounted robotic arm that sweeps an electromagnetic sensor across steel
+          structures to find defects at height.</li>
+          <li>Designed the two-link carbon fiber arm to stay under a 1 kg limit, and its control system: a Teensy 4.1
+          running inverse kinematics to drive two DYNAMIXEL servos.</li>
+          <li>Designed a custom carrier PCB for the Teensy, split into a main board and a servo hub so it fits on the
+          airframe and survives vibration. Boards are in fabrication now.</li>
+          <li>Bench-tested the payload on real steel assets; now integrating it on a Voliro drone shipped to Cal Poly
+          for our own flight testing.</li>
+        </ul>
+      </article>
+
+      <article class="entry" id="pants-pulleez">
+        <div class="entry-head">
+          <h3>Pants Pulleez: seated dressing aid <span class="sub">ME 403 Access by Design, Cal Poly · team of three</span></h3>
+          <span class="date">Spring 2026</span>
+        </div>
+        <p>Built for a wheelchair user with muscular dystrophy who could get his pants to his knees with a grabber,
+        but couldn't pull them over his hips while seated. Two cords clip to the back of the waistband and run through
+        pulleys on a floor-to-ceiling tension pole beside the toilet. Pulling a handle down in front lifts one side of
+        the pants at a time, and the pole installs with no drilling.</p>
+        <ul>
+          <li>Did all of the CAD, and designed and FDM-printed every custom part: pulley holders, boom brackets, rope
+          retainers and ball handles in PLA at 75% infill.</li>
+          <li>With a teammate, water-jet cut the post top plates, machined the lathe-turned adjustable-foot adapters
+          and coated the aluminum frame.</li>
+          <li>Held a 50 lb load through the full system with no failure, twice the user's estimated 25 lb maximum
+          pull.</li>
+          <li>Pulling down in front produced 73% more force than reaching back and pulling up (38 lb vs 22 lb),
+          confirming the core idea of the design.</li>
+          <li>Came in at $99 in purchased parts against a $150 budget.</li>
+        </ul>
+        <div class="gallery two">
+          <figure class="tall"><img src="assets/img/pants-pulleez-device.jpg" alt="Two light-blue floor-to-ceiling poles with boom arms, pulleys, cords and blue ball handles" loading="lazy"><figcaption>The finished prototype: tension poles, boom arms, pulleys and printed ball handles</figcaption></figure>
+          <figure class="tall"><img style="object-position: 50% 45%" src="assets/img/pants-pulleez-demo.jpg" alt="Teammate Joe Chiappetta seated in front of the device, pulling down on both ball handles" loading="lazy"><figcaption>Teammate Joe Chiappetta demonstrating the pull-down motion</figcaption></figure>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>eFlesh touch sensing <span class="sub">Machine learning project, Cal Poly</span></h3>
+          <span class="date">Aug 2025 – now</span>
+        </div>
+        <ul>
+          <li>Turned a 3D printer into an automated test rig that presses a custom compliant foam sensor and labels its
+          own contact data.</li>
+          <li>Used that data to train a neural network that locates where the sensor is being touched.</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
