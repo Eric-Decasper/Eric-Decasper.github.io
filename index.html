@@ -47,8 +47,7 @@
       <h2>About</h2>
       <p>I'm a mechanical engineering student at Cal Poly, San Luis Obispo, graduating in December 2026. I build
       robotic hardware and take it from first prototype through production tooling and testing.</p>
-      <p>This summer I interned at Western Magnetics, working on testing and tooling for their motor production line,
-      from the end-of-line tester's vibration-isolated fixture to adhesive qualification and wire-EDM tooling. Before
+      <p>This summer I interned at Western Magnetics, working on testing and production engineering for their motor line, from the end-of-line tester's pneumatic vibration-damping fixture to adhesive qualification and wire-EDM tooling. Before
       that I spent six months at Voliro in Zurich developing aerial inspection and repair payloads. I'm now leading a Voliro-sponsored senior project at Cal Poly: a drone-mounted robotic arm
       that scans steel structures for defects.</p>
       <p>I'm looking for full-time mechanical, robotics and hardware roles starting in early 2027.</p>
@@ -85,15 +84,14 @@
         </div>
         <p class="role">Mechanical Engineering Intern · South San Francisco, CA</p>
         <ul>
-          <li>Built the vibration-isolated test fixture and worked on the dashboard for the end-of-line tester that
+          <li>Built the pneumatic vibration-damping fixture and worked on the dashboard for the end-of-line tester that
           grades every motor off the production line, screening electrical imbalance, vibration and drag in a 45-second
-          cycle. It ran over 4,400 cycles by August.</li>
-          <li>Built the company's first drone platform for flight-testing its motors, and used it to collect
+          cycle. The tester ran over 4,400 cycles by August.</li>
+          <li>Built the company's first drone platform for flight-testing its motors and used it to collect
           in-flight data on motor performance.</li>
           <li>Set up an in-line magnet bond strength test that caught an under-cured batch before it shipped, and
           qualified an adhesive 2–3x stronger, taking adhesion failures from over 70% to near zero.</li>
-          <li>Owned custom wire-EDM tooling from design through fabrication, and set up an outside machining partner
-          that turns around urgent tooling in about a week.</li>
+          <li>Owned custom wire-EDM tooling from design through fabrication and set up a partnership with an outside machine shop that turns around urgent tooling in about a week.</li>
           <li>Traced motor KV variation to magnet thickness and the lamination tolerance stack-up, then built a
           measurement fixture so the team could quantify and control it.</li>
         </ul>
@@ -112,13 +110,11 @@
         </div>
         <p class="role">Mechanical Engineering Intern · Zurich, Switzerland</p>
         <ul>
-          <li>Developed aerial spot-repair payloads with MontiPower from concept to flight-tested prototypes, proving
-          out an inspect-and-repair workflow on one platform that Voliro now sells as a service
+          <li>Developed aerial spot-repair payloads with MontiPower from concept to flight-tested prototypes, proving out an inspect-and-repair workflow on a single platform, which Voliro now sells as a service
           (<a href="#projects">the Aeroblaster</a>).</li>
           <li>Restructured legacy payload assemblies in SolidWorks into modular CAD so new payloads could be added and
           updated without rebuilding the tree.</li>
-          <li>Designed a cooling solution for a next-generation drone radio and built a 40 °C environmental chamber to
-          verify it ran continuously at worst-case ambient temperature.</li>
+          <li>Designed a cooling solution for a next-generation drone radio and built a 40 °C environmental chamber to verify the radio could run continuously at worst-case ambient temperature.</li>
         </ul>
         <blockquote class="credit">
           <p>“He consistently delivered ready-to-use product prototypes while working on highly open-ended
@@ -153,19 +149,17 @@
         </div>
         <p>Corrosion on silos, tanks and other tall steel structures usually means scaffolding or rope access and a
         shutdown, even for a small spot. The Voliro T drone could already find that corrosion through contact
-        inspection. This project made it able to fix it on the same flight.</p>
+        inspection. This project let it repair that corrosion on the same flight.</p>
         <ul>
           <li>Led development of the blaster payload, built around MontiPower's Bristle Blaster head, from concept to
           a 3D-printed PLA prototype in one week, then through nylon and CNC-machined metal versions to bring it as
           close to production as possible.</li>
           <li>Designed its core mechanical architecture, which the production Aeroblaster still uses after later
           iterations. The payload weighs under 800 g.</li>
-          <li>Designed and prototyped a novel cooling housing with a fan driven by the motor's own rotation. It pulls air
-          through the motor for forced-convection cooling, while a fine mesh keeps microscopic metal dust from
+          <li>Designed and prototyped a novel cooling housing with a fan driven by the motor's own rotation. The fan pulls air through the motor for forced-convection cooling, while a fine mesh keeps microscopic metal dust from
           collecting on the motor magnets.</li>
-          <li>Designed the coating roller payload still in use today, which pairs with the blaster to inspect, strip and
-          recoat a spot on one platform.</li>
-          <li>The payload preps steel to a profile comparable to SSPC-SP 11 (25 µm or more), validated by an independent
+          <li>Designed the coating roller payload still in use today, which pairs with the blaster so one platform can inspect, strip and recoat a spot.</li>
+          <li>The blaster preps steel to a profile comparable to SSPC-SP 11 (25 µm or more), validated by an independent
           lab and reviewed by SGK, the Swiss Society for Corrosion Protection.</li>
         </ul>
         <p class="link-line">Now sold by MontiPower and Voliro as the Aeroblaster:
@@ -191,15 +185,13 @@
         </div>
         <p>A drone-mounted robotic arm that sweeps an electromagnetic sensor across steel structures to find defects
         at height. I'm leading the team, and we've done all of the design, controls software and electronics
-        ourselves. The payload is still in development, and we're now flight testing it on a Voliro T at Cal Poly.</p>
+        ourselves. The payload is still in development, and we're now flight-testing it on a Voliro T at Cal Poly.</p>
         <ul>
-          <li>Two-link arm under a 1 kg limit, built from machined aluminum parts, SLS-printed PA11 nylon parts printed
-          on campus, and carbon fiber plates water-jet cut on campus.</li>
+          <li>Two-link arm under a 1 kg limit, built from machined aluminum parts, SLS PA11 nylon parts printed on campus, and carbon fiber plates water-jet cut on campus.</li>
           <li>A Teensy 4.1 runs inverse kinematics to drive two DYNAMIXEL servos, with a dashboard we built for tuning
           the control parameters.</li>
           <li>Custom Teensy carrier PCB with our own DYNAMIXEL motor driver, split into a main board and a servo hub so
-          it fits on the airframe and survives vibration. I set the requirements and design choices and used
-          AI-assisted tools for the KiCad layout.</li>
+          it fits on the airframe and survives vibration. I set the requirements and made the design choices, and used AI-assisted tools for the KiCad layout.</li>
           <li>Bench-tested on real steel assets before moving to flight tests.</li>
           <li>Simulated the arm on the Voliro T in MuJoCo to try out sensor sweeps along pipes before flying them.</li>
         </ul>
@@ -230,7 +222,7 @@
         <a href="https://www.linkedin.com/posts/eric-decasper-673626203_proud-to-have-worked-on-the-mechanical-design-ugcPost-7420228619052109826-oyau/" target="_blank" rel="noopener">my LinkedIn post</a>.</p>
         <div class="gallery two">
           <figure class="wide"><img src="assets/img/iot-drone-on-site.jpg" alt="Voliro T with the sensor deployment payload sitting on a wet rooftop beneath industrial pipe racks, ready for takeoff" loading="lazy"><figcaption>Ready for takeoff at an industrial site, under the pipe racks it places sensors on</figcaption></figure>
-          <figure class="tall"><img src="assets/img/iot-sensor-pipe-rack.jpg" alt="Orange wireless sensor attached to the insulation cladding of a pipe in a pipe rack" loading="lazy"><figcaption>A sensor placed on insulated pipe in a pipe rack</figcaption></figure>
+          <figure class="tall"><img src="assets/img/iot-sensor-pipe-rack.jpg" alt="Orange wireless sensor attached to the insulation cladding of a pipe in a pipe rack" loading="lazy"><figcaption>A sensor placed on an insulated pipe in a pipe rack</figcaption></figure>
           <figure class="tall"><img src="assets/img/iot-sensor-stack.jpg" alt="Orange wireless sensor attached high on a tall exhaust stack" loading="lazy"><figcaption>A sensor placed high on an exhaust stack</figcaption></figure>
           <figure class="wide"><img src="assets/img/iot-sensor-overhead-pipes.jpg" alt="Orange wireless sensor on an insulated pipe in an overhead pipe rack, seen from below" loading="lazy"><figcaption>A sensor on an overhead line, out of reach without a lift or scaffolding</figcaption></figure>
           <figure class="wide"><img src="assets/img/iot-payload-flight.jpg" alt="Voliro T hovering indoors with the white cylindrical sensor deployment payload mounted underneath" loading="lazy"><figcaption>The payload in flight testing at Voliro</figcaption></figure>
@@ -251,11 +243,10 @@
           retainers and ball handles in PLA at 75% infill.</li>
           <li>With a teammate, water-jet cut the post top plates, machined the lathe-turned adjustable-foot adapters
           and coated the aluminum frame.</li>
-          <li>Held a 50 lb load through the full system with no failure, twice the user's estimated 25 lb maximum
-          pull.</li>
+          <li>The full system held a 50 lb load with no failure, twice the user's estimated 25 lb maximum pull.</li>
           <li>Pulling down in front produced 73% more force than reaching back and pulling up (38 lb vs 22 lb),
           confirming the core idea of the design.</li>
-          <li>Came in at $99 in purchased parts against a $150 budget.</li>
+          <li>The prototype came in at $99 in purchased parts against a $150 budget.</li>
         </ul>
         <div class="gallery two">
           <figure class="tall"><img src="assets/img/pants-pulleez-device.jpg" alt="Two light-blue floor-to-ceiling poles with boom arms, pulleys, cords and blue ball handles" loading="lazy"><figcaption>The finished prototype: tension poles, boom arms, pulleys and printed ball handles</figcaption></figure>
